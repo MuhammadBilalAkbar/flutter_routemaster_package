@@ -126,4 +126,4 @@ For tabs `CupertinoTabPage` is defined in `routes` which is calling `TabbedPage`
               ),
 ```
 7. `page_one.dart` and `private_page.dart` are simple and similar. `private_page.dart` accepts String `message` as query to show on page.
-8. In `tabbed_page.dart`, `CupertinoTabScaffold` is being returned. `tabBar` and `tabBuilder` are required parameters. `tabBar` contains two children which are defined in `my_app.dart` `routes` property as `CupertinoTabPage` with `paths: ['/tabs/one', '/tabs/two'],`
+8. In `tabbed_page.dart`, `CupertinoTabScaffold` is being returned. `tabBar` and `tabBuilder` are required parameters. `tabBar` contains two children which are defined in `my_app.dart` `routes` property as `CupertinoTabPage` with `paths: ['/tabs/one', '/tabs/two'],`.
