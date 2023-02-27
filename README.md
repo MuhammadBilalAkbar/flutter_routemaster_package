@@ -112,8 +112,8 @@ For this router, `routeInformationParser` is set to `RoutemasterParser()` which 
 ```
 `RoutemasterDelegate` requires `routesBuilder`. All other parameters are optional. `onUnknownRoute`, any page can be set or you can `Redirect` to specific route which is defined in routes builder.
 For tabs `CupertinoTabPage` is defined in `routes` which is calling `TabbedPage` from `tabbed_page.dart`.
-5. `export_all_pages.dart` exports all pages to `my_app.dart` to define routes.
-6. `route_master_page.dart` and `page_one.dart` are similar, `Routemaster.of(context).push('/namedRoute')` and `Routemaster.of(context).replace('/namedRoute')` are called.
+5.`export_all_pages.dart` exports all pages to `my_app.dart` to define routes.
+6.`route_master_page.dart` and `page_one.dart` are similar, `Routemaster.of(context).push('/namedRoute')` and `Routemaster.of(context).replace('/namedRoute')` are called.
 <br />`replace` Replaces the current route with path. On the web, this prevents the user returning to the previous route via the back button.
 <br />`push` Navigates to path. If this path starts with a forward slash, it's treated as an absolute path. Otherwise it's handled as a path relative to the current route.
 <br />You can use `queryParameters` get Query parameters from the path. e.g. /page?hello=world becomes queryParameters<code>'hello'</code> == 'world'
