@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:routemaster/routemaster.dart';
-import 'package:flutter_routemaster_package/pages/route_master_page.dart';
 
-import 'pages/export_all_pages.dart';
+import 'pages/route_master_page.dart';
+import 'pages/not_found_page.dart';
+import 'pages/page_one.dart';
+import 'pages/page_two.dart';
+import 'pages/private_page.dart';
+import 'pages/tabbed_page.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
@@ -51,7 +55,10 @@ class MyApp extends StatelessWidget {
               iconTheme: IconThemeData(color: Colors.white),
             ),
             textTheme: const TextTheme(
-              labelLarge: TextStyle(fontSize: 30),
+              labelLarge: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
               titleMedium: TextStyle(fontSize: 30),
               bodySmall: TextStyle(fontSize: 20),
               bodyLarge: TextStyle(fontSize: 30),
@@ -59,8 +66,10 @@ class MyApp extends StatelessWidget {
             ),
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 16,
+                  horizontal: 20,
+                ),
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),

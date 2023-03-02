@@ -7,39 +7,49 @@ class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(),
-        body: ListView(
-          children: [
-            ElevatedButton(
-              onPressed: () => Routemaster.of(context).replace('/two'),
-              child: const Text('Replace page two'),
-            ),
-            ElevatedButton(
-              onPressed: () => Routemaster.of(context).push('/two'),
-              child: const Text('Push page two'),
-            ),
-            ElevatedButton(
-              onPressed: () => Routemaster.of(context).push('/one/two'),
-              child: const Text('Push /one/two'),
-            ),
-            ElevatedButton(
-              onPressed: () => Routemaster.of(context).push(
-                '/_private',
-                queryParameters: {
-                  'message': 'private page pushed from page one'
-                },
+        body: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 8.0,
+            vertical: 20,
+          ),
+          child: ListView(
+            children: [
+              ElevatedButton(
+                onPressed: () => Routemaster.of(context).replace('/two'),
+                child: const Text('Replace page two'),
               ),
-              child: const Text('Push private page'),
-            ),
-            ElevatedButton(
-              onPressed: () => Routemaster.of(context).replace(
-                '/_private',
-                queryParameters: {
-                  'message': 'private page replaced from page one'
-                },
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () => Routemaster.of(context).push('/two'),
+                child: const Text('Push page two'),
               ),
-              child: const Text('Replace private page'),
-            ),
-          ],
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () => Routemaster.of(context).push('/one/two'),
+                child: const Text('Push /one/two'),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () => Routemaster.of(context).push(
+                  '/_private',
+                  queryParameters: {
+                    'message': 'private page pushed from page one'
+                  },
+                ),
+                child: const Text('Push private page'),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () => Routemaster.of(context).replace(
+                  '/_private',
+                  queryParameters: {
+                    'message': 'private page replaced from page one'
+                  },
+                ),
+                child: const Text('Replace private page'),
+              ),
+            ],
+          ),
         ),
       );
 }

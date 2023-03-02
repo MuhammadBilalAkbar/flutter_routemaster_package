@@ -10,21 +10,27 @@ class RouteMasterPage extends StatelessWidget {
           title: const Text('Route Master Page'),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 8.0,
+            vertical: 20,
+          ),
           child: ListView(
             children: [
               ElevatedButton(
                 onPressed: () => Routemaster.of(context).replace('/one'),
                 child: const Text('Replace page one'),
               ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () => Routemaster.of(context).push('/one'),
                 child: const Text('Push page one'),
               ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () => Routemaster.of(context).push('/tabs'),
                 child: const Text('Replace tabs'),
               ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () => Routemaster.of(context).push(
                   '/_private?',
@@ -34,6 +40,7 @@ class RouteMasterPage extends StatelessWidget {
                 ),
                 child: const Text('Push private page'),
               ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () => Routemaster.of(context).replace('/asdf'),
                 // 'asdf' is not defined in RoutesBuilder.
